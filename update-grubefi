@@ -1,0 +1,46 @@
+#!/usr/bin/sh
+#
+# grubefi-rpi3
+# Synchronizes the firmware and configuration for booting via UEFI
+#
+
+USERID=`id -u`
+if [ $USERID -eq 0 ]; then
+   cp /boot/efi/config.txt.uefi /boot/efi/config.txt
+   echo "" >> /boot/efi/config.txt
+   cat /boot/config.txt >> /boot/efi/config.txt
+
+   #sed -i -e 's/^uart_2ndstage=1/#uart_2ndstage=1/' /boot/efi/config.txt
+   #sed -i -e 's/^dtoverlay=miniuart-bt/#dtoverlay=miniuart-bt/' /boot/efi/config.txt
+
+   sed -i -e '/^initramfs/d' /boot/efi/config.txt
+   sed -i -e '/^kernel=/d' /boot/efi/config.txt
+
+   cp -u --preserve=timestamps /boot/bcm2710-rpi-3-b.dtb /boot/efi/
+   cp -u --preserve=timestamps /boot/bcm2710-rpi-3-b-plus.dtb /boot/efi/
+   cp -u --preserve=timestamps /boot/bcm2710-rpi-cm3.dtb /boot/efi/
+
+   cp -u -r --preserve=timestamps /boot/overlays /boot/efi/
+   if [ -d /boot/firmware ]; then
+      cp -u -r --preserve=timestamps /boot/firmware /boot/efi/
+   fi
+
+   ARGS=`sed 's/root=\S* //' /boot/cmdline.txt | sed 's/rw //' | sed 's/rootflags=subvol=@ //'`
+   NEW_CMDLINE="GRUB_CMDLINE_LINUX=\"${ARGS}\""
+   if [[ "$NEW_CMDLINE" != *"snd_bcm2835.enable_headphones="* ]]; then
+      NEW_CMDLINE=`echo "$NEW_CMDLINE" | sed 's/rootwait/rootwait snd_bcm2835.enable_headphones=1/'`
+   fi
+   if [[ "$NEW_CMDLINE" != *"8250.nr_uarts="* ]]; then
+      NEW_CMDLINE=`echo "$NEW_CMDLINE" | sed 's/rootwait/rootwait 8250.nr_uarts=1/'`
+   fi
+   sed -i -e "s/^GRUB_CMDLINE_LINUX=.*/${NEW_CMDLINE}/" /etc/default/grub
+
+   grub-mkconfig -o /boot/efi/grub/grub.cfg
+   if [ $? -ne 0 ]; then
+      echo "Error: Failed to successfully run grub-mkconfig"
+   fi
+
+   sync
+else
+   echo "Error: You must run this as root or with sudo"
+fi
