@@ -29,7 +29,7 @@ The boot configuration being config.txt, cmdline.txt, and overlays.
 Raspberry Pi 3 UEFI Firmware version 1.36 \
 For more information, refer to the [README.md](https://github.com/pftf/RPi3/blob/master/Readme.md "RPi3 UEFI").
 
-Do not Samsung Evo 32GB cards, there is an open [issue](https://github.com/pftf/RPi3/issues/24 "#24").
+Do not use Samsung Evo 32GB cards, there is an open [issue](https://github.com/pftf/RPi3/issues/24 "#24").
 
 The headphone jack is enabled, to better mimic booting via the RPi3 firmware.
 
