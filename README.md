@@ -26,7 +26,7 @@ The boot configuration being config.txt, cmdline.txt, and overlays.
 
 - - - -
 #### Release Notes ####
-Raspberry Pi 3 UEFI Firmware version 1.36
+Raspberry Pi 3 UEFI Firmware version 1.36 \
 For more information, refer to the [README.md](https://github.com/pftf/RPi3/blob/master/Readme.md "RPi3 UEFI").
 
 The headphone jack is enabled, to better mimic booting via the RPi3 firmware.
