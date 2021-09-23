@@ -1,4 +1,7 @@
 # grubefi-rpi3
+
+#### WARNING: This is still a Work In Progress, it is not yet funtional! ####
+
 ![grub2](https://user-images.githubusercontent.com/47831850/134357018-3530c95c-e774-45e7-af97-f830882b6a62.jpg)
 #### Grubefi your Pi ####
 
@@ -24,47 +27,9 @@ The boot configuration being config.txt, cmdline.txt, and overlays.
  
 4) makepkg -sic
  
-5) Configure the UEFI on reboot, after each install/upgrade
-
-Important: The UEFI Firmware (RPI_EFI.fd) saves the settings in the file itself. \
-Each time the firmware is installed/upgraded, all settings will be reset to their default. \
-You will need to (re)configure the following settings:
-  - disable 3GB RAM limit
-  - set ACPI + Devicetree
-  - set boot order (if needed)
-
 - - - -
 #### Guide to the UEFI Firmware ####
 Press <kbd>Esc</kbd> when you see the Raspberry
-
-`Device Manager` → `Raspberry Pi Configuration` → `Advanced Configuration`
-
-Limit RAM to 3GB - Press <kbd>Enter</kbd> Disabled <kbd>Enter</kbd> \
-System Table Selection - Press <kbd>Enter</kbd> ACPI + Devicetree <kbd>Enter</kbd>
- - Press <kbd>F10</kbd> to save
- - Press <kbd>Y</kbd> to confirm
- - Press <kbd>Esc</kbd> multiple times to return to the main menu
-
-`Reset`
- - Press <kbd>Enter</kbd>
-
-SSD seem to be placed first in the boot order (if so, skip this). \
-If using an SD Card, you will also want to set the Boot Order. \
-By default, the SD/MMC is set to last, after long network timeouts.
-   
-Press <kbd>Esc</kbd> when you see the Raspberry
-
- `Boot Maintenance Manager` → `Boot Options` → `Change Boot Order`
- - Press <kbd>Enter</kbd>
- - Press <kbd>↑</kbd><kbd>↓</kbd> to highlight your boot device, likely SD/MMC
- - Press <kbd>+</kbd> multiple times to move it to the top of the list
- - Press <kbd>Enter</kbd>
- - Press <kbd>F10</kbd> to save
- - Press <kbd>Y</kbd> to confirm
- - Press <kbd>Esc</kbd> multiple times to return to the main menu
-
-`Reset`
-   - Press <kbd>Enter</kbd>
 
 For more information refer to the [README.md](https://github.com/pftf/RPi3/blob/master/Readme.md "RPi3 UEFI").
 
