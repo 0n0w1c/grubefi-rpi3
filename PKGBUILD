@@ -1,8 +1,8 @@
 pkgname=grubefi-rpi3
 pkgver=1.0
-pkgrel=0
+pkgrel=1
 uefiver=1.36
-pkgdesc="grubefi your pi (3B+)"
+pkgdesc="grubefi your pi (3b+)"
 arch=('aarch64')
 url="https://github.com/0n0w1c/grubefi-rpi3"
 license=('MIT')
@@ -12,13 +12,13 @@ conflicts=()
 options=('!strip')
 install=grubefi-rpi3.install
 source=("https://github.com/pftf/RPi3/releases/download/v$uefiver/RPi3_UEFI_Firmware_v$uefiver.zip"
-        'https://github.com/0n0w1c/grubefi-rpi4/blob/master/95-update-grubefi.hook'
-        'https://github.com/0n0w1c/grubefi-rpi4/blob/master/update-grubefi'
-        'https://github.com/0n0w1c/grubefi-rpi4/blob/master/grubefi-rpi3.install'
-        'https://github.com/0n0w1c/grubefi-rpi4/blob/master/watch-cmdline.path'
-        'https://github.com/0n0w1c/grubefi-rpi4/blob/master/watch-cmdline.service'
-        'https://github.com/0n0w1c/grubefi-rpi4/blob/master/watch-config.path'
-        'https://github.com/0n0w1c/grubefi-rpi4/blob/master/watch-config.service')
+        'https://github.com/0n0w1c/grubefi-rpi3/blob/master/95-update-grubefi.hook'
+        'https://github.com/0n0w1c/grubefi-rpi3/blob/master/update-grubefi'
+        'https://github.com/0n0w1c/grubefi-rpi3/blob/master/grubefi-rpi3.install'
+        'https://github.com/0n0w1c/grubefi-rpi3/blob/master/watch-cmdline.path'
+        'https://github.com/0n0w1c/grubefi-rpi3/blob/master/watch-cmdline.service'
+        'https://github.com/0n0w1c/grubefi-rpi3/blob/master/watch-config.path'
+        'https://github.com/0n0w1c/grubefi-rpi3/blob/master/watch-config.service')
 
 md5sums=('c684b194a4d2e8b2ab597a3c09d0b2e8'
          'c1c91ada19e8517ff17b0413c4b3e0c1'
