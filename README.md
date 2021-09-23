@@ -1,7 +1,4 @@
 # grubefi-rpi3
-
-#### WARNING: This is still a Work In Progress, it is not yet funtional! ####
-
 ![grub2](https://user-images.githubusercontent.com/47831850/134357018-3530c95c-e774-45e7-af97-f830882b6a62.jpg)
 #### Grubefi your Pi ####
 
@@ -26,16 +23,11 @@ The boot configuration being config.txt, cmdline.txt, and overlays.
 3) Download the PKGBUILD or `git clone https://github.com/0n0w1c/grubefi-rpi3.git`
  
 4) makepkg -sic
- 
-- - - -
-#### Guide to the UEFI Firmware ####
-Press <kbd>Esc</kbd> when you see the Raspberry
-
-For more information refer to the [README.md](https://github.com/pftf/RPi3/blob/master/Readme.md "RPi3 UEFI").
 
 - - - -
 #### Release Notes ####
 Raspberry Pi 3 UEFI Firmware version 1.36
+For more information about the RPi3 UEFI Firmware, refer to the [README.md](https://github.com/pftf/RPi3/blob/master/Readme.md "RPi3 UEFI").
 
 The headphone jack is enabled, to better mimic booting via the RPi3 firmware.
 
