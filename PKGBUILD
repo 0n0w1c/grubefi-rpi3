@@ -10,15 +10,14 @@ depends=('grub' 'grub-theme-vimix' 'lsof' 'manjaro-arm-wallpapers')
 provides=('grubefi-rpi3')
 conflicts=()
 options=('!strip')
-install=grubefi-rpi3.install
 source=("https://github.com/pftf/RPi3/releases/download/v$uefiver/RPi3_UEFI_Firmware_v$uefiver.zip"
-        'https://github.com/0n0w1c/grubefi-rpi3/blob/master/95-update-grubefi.hook'
-        'https://github.com/0n0w1c/grubefi-rpi3/blob/master/update-grubefi'
-        'https://github.com/0n0w1c/grubefi-rpi3/blob/master/grubefi-rpi3.install'
-        'https://github.com/0n0w1c/grubefi-rpi3/blob/master/watch-cmdline.path'
-        'https://github.com/0n0w1c/grubefi-rpi3/blob/master/watch-cmdline.service'
-        'https://github.com/0n0w1c/grubefi-rpi3/blob/master/watch-config.path'
-        'https://github.com/0n0w1c/grubefi-rpi3/blob/master/watch-config.service')
+        "https://raw.githubusercontent.com/0n0w1c/$pkgname/master/95-update-grubefi.hook"
+        "https://raw.githubusercontent.com/0n0w1c/$pkgname/master/update-grubefi"
+        "https://raw.githubusercontent.com/0n0w1c/$pkgname/master/grubefi-rpi3.install"
+        "https://raw.githubusercontent.com/0n0w1c/$pkgname/master/watch-cmdline.path"
+        "https://raw.githubusercontent.com/0n0w1c/$pkgname/master/watch-cmdline.service"
+        "https://raw.githubusercontent.com/0n0w1c/$pkgname/master/watch-config.path"
+        "https://raw.githubusercontent.com/0n0w1c/$pkgname/master/watch-config.service")
 
 md5sums=('c684b194a4d2e8b2ab597a3c09d0b2e8'
          'c1c91ada19e8517ff17b0413c4b3e0c1'
