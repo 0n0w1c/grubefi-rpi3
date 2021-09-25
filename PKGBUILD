@@ -1,6 +1,6 @@
 pkgname=grubefi-rpi3
 pkgver=1.0
-pkgrel=1
+pkgrel=3
 uefiver=1.36
 pkgdesc="grubefi your pi (3b+)"
 arch=('aarch64')
@@ -10,6 +10,8 @@ depends=('grub' 'grub-theme-vimix' 'lsof' 'manjaro-arm-wallpapers')
 provides=('grubefi-rpi3')
 conflicts=()
 options=('!strip')
+install=grubefi-rpi3.install
+
 source=("https://github.com/pftf/RPi3/releases/download/v$uefiver/RPi3_UEFI_Firmware_v$uefiver.zip"
         "https://raw.githubusercontent.com/0n0w1c/$pkgname/master/95-update-grubefi.hook"
         "https://raw.githubusercontent.com/0n0w1c/$pkgname/master/update-grubefi"
@@ -22,7 +24,7 @@ source=("https://github.com/pftf/RPi3/releases/download/v$uefiver/RPi3_UEFI_Firm
 md5sums=('c684b194a4d2e8b2ab597a3c09d0b2e8'
          'c1c91ada19e8517ff17b0413c4b3e0c1'
          '69ed8dde0c4211e5b8b0bec97ca0bf34'
-         '67536bcd3845a99b5806c68b173fa757'
+         'd6c6c24f0974ea46c67ebf422fd2651e'
          '780f27cc63514018f4fc373dbba91b3f'
          'e3086a7d5c1dea1aeaed1674ccbbe176'
          '027254ce97c7b50485a5854b989ec876'
