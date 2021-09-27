@@ -2,8 +2,8 @@
 ![grub2](https://user-images.githubusercontent.com/47831850/134357018-3530c95c-e774-45e7-af97-f830882b6a62.jpg)
 #### Grubefi your Pi ####
 
-An experimental PKGBUILD for Manjaro ARM RPi3 B+ installations. \
-It will convert a RPi3 B+ from booting via firmware to UEFI and grub. \
+An experimental PKGBUILD for Manjaro ARM RPi3 installations. \
+It will convert a RPi3 from booting via firmware to UEFI and grub. \
 And when removed, it will revert to firmware. \
 You can install and remove at will, with or without rebooting.
  
