@@ -1,7 +1,7 @@
 pkgname=grubefi-rpi3
-pkgver=1.1
+pkgver=1.2
 pkgrel=1
-uefiver=1.36
+uefiver=1.35
 pkgdesc="grubefi your pi (3b+)"
 arch=('aarch64')
 url="https://github.com/0n0w1c/grubefi-rpi3"
@@ -21,7 +21,7 @@ source=("https://github.com/pftf/RPi3/releases/download/v$uefiver/RPi3_UEFI_Firm
         "https://raw.githubusercontent.com/0n0w1c/$pkgname/master/watch-config.path"
         "https://raw.githubusercontent.com/0n0w1c/$pkgname/master/watch-config.service")
 
-md5sums=('c684b194a4d2e8b2ab597a3c09d0b2e8'
+md5sums=('11d66f288c2ca136efd4003735fa084c'
          'c1c91ada19e8517ff17b0413c4b3e0c1'
          'c8f8d31232e9900de8b3109faed85004'
          '632f20d07232266185fcbc83e6d4812c'

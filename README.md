@@ -26,7 +26,7 @@ The boot configuration being config.txt, cmdline.txt, and overlays.
 
 - - - -
 #### Release Notes ####
-Raspberry Pi 3 UEFI Firmware version 1.36 \
+Downgraded to Raspberry Pi 3 UEFI Firmware version 1.35 \
 For more information, refer to the [README.md](https://github.com/pftf/RPi3/blob/master/Readme.md "RPi3 UEFI").
 
 Do not use Samsung Evo 32GB cards, there is an open [issue](https://github.com/pftf/RPi3/issues/24 "#24").
