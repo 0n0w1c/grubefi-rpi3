@@ -1,5 +1,5 @@
 pkgname=grubefi-rpi3
-pkgver=1.2
+pkgver=1.3
 pkgrel=1
 uefiver=1.35
 pkgdesc="grubefi your pi (3b+)"
@@ -23,8 +23,8 @@ source=("https://github.com/pftf/RPi3/releases/download/v$uefiver/RPi3_UEFI_Firm
 
 md5sums=('11d66f288c2ca136efd4003735fa084c'
          'c1c91ada19e8517ff17b0413c4b3e0c1'
-         'c8f8d31232e9900de8b3109faed85004'
-         '632f20d07232266185fcbc83e6d4812c'
+         '944db3a429918e88428bde8b658fb681'
+         'e8154e17fd44ee949cd1d2a506b161ab'
          '780f27cc63514018f4fc373dbba91b3f'
          '9b4afbca83c63b826416187809cb3d1e'
          '027254ce97c7b50485a5854b989ec876'

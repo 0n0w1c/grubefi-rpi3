@@ -33,6 +33,9 @@ if [ $USERID -eq 0 ]; then
    if [[ "$NEW_CMDLINE" != *"8250.nr_uarts="* ]]; then
       NEW_CMDLINE=`echo "$NEW_CMDLINE" | sed 's/rootwait/rootwait 8250.nr_uarts=1/'`
    fi
+   if [[ "$NEW_CMDLINE" != *"acpi="* ]]; then
+      NEW_CMDLINE=`echo "$NEW_CMDLINE" | sed 's/rootwait/rootwait acpi=off/'`
+   fi
    sed -i -e "s/^GRUB_CMDLINE_LINUX=.*/${NEW_CMDLINE}/" /etc/default/grub
 
    sync

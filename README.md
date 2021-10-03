@@ -26,6 +26,8 @@ The boot configuration being config.txt, cmdline.txt, and overlays.
 
 - - - -
 #### Release Notes ####
+Added acpi=off (if not defined) to the kernel arguments and added efivarfs to MODULES= in mkinitcpio.conf.
+
 Downgraded to Raspberry Pi 3 UEFI Firmware version 1.35 \
 For more information, refer to the [README.md](https://github.com/pftf/RPi3/blob/master/Readme.md "RPi3 UEFI").
 
