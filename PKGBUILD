@@ -1,6 +1,6 @@
 pkgname=grubefi-rpi3
 pkgver=1.3
-pkgrel=2
+pkgrel=3
 uefiver=1.35
 pkgdesc="grubefi your pi (3b+)"
 arch=('aarch64')
