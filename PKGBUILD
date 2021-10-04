@@ -34,9 +34,10 @@ package() {
    install -D bcm2710-rpi-3-b.dtb $pkgdir/boot/efi/bcm2710-rpi-3-b.dtb
    install -D bcm2710-rpi-3-b-plus.dtb $pkgdir/boot/efi/bcm2710-rpi-3-b-plus.dtb
    install -D bcm2710-rpi-cm3.dtb $pkgdir/boot/efi/bcm2710-rpi-cm3.dtb
-   #install -D overlays/* $pkgdir/boot/efi/overlays
-   install -d $pkgdir/boot/efi/firmware
-   install -D firmware/* $pkgdir/boot/efi/firmware
+
+   #find overlays -type f -exec install -D "{}" "$pkgdir/boot/efi/{}" \;
+   find firmware -type f -exec install -D "{}" "$pkgdir/boot/efi/{}" \;
+
    install -D bootcode.bin $pkgdir/boot/efi/bootcode.bin
    install -D start.elf $pkgdir/boot/efi/start.elf
    install -D fixup.dat $pkgdir/boot/efi/fixup.dat
