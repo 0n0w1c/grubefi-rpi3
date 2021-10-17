@@ -1,6 +1,6 @@
 pkgname=grubefi-rpi3
 pkgver=1.3
-pkgrel=3
+pkgrel=4
 uefiver=1.35
 pkgdesc="grubefi your pi (3b+)"
 arch=('aarch64')
@@ -43,6 +43,9 @@ package() {
    install -D fixup.dat $pkgdir/boot/efi/fixup.dat
    install -D Readme.md $pkgdir/boot/efi/Readme.md
    install -D RPI_EFI.fd $pkgdir/boot/efi/RPI_EFI.fd
+
+   sed -i -e 's/\r//g' config.txt
+   sync
    install -D config.txt $pkgdir/boot/efi/config.txt.uefi
 
    install -Dm 644 watch-cmdline.path $pkgdir/etc/systemd/system/watch-cmdline.path
